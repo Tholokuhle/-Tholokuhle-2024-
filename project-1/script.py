@@ -2,7 +2,7 @@ from collections import defaultdict, Counter
 import heapq
 
 class FrequentWords:
-    def __init__(self, n=10):       # Initialize with default top n words to 10
+    def __init__(self, n=10):      # Initialize with default top n words to 10
         self.n = n
         self.word_count = defaultdict(int)  # Dictionary to store word counts
     
