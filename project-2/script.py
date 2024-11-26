@@ -4,20 +4,11 @@ from typing import List
 
 class WeightedAverage:
     def __init__(self, w: List[float]):
-        """
-        Initialize the WeightedAverage with a list of weights.
-        :param w: List of weights where w[0] is the weight for the most recent value.
-        """
         self.w = w
         self.n = len(w)
         self.buffer = []
 
     def process(self, x: float) -> float:
-        """
-        Process a new signal value and return the weighted average of the last n values.
-        :param x: The current signal value.
-        :return: The weighted average.
-        """
         # Add the new value to the buffer
         self.buffer.insert(0, x)
         
